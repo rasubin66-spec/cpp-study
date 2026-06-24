@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
-    cout << "Hello\nWorld!";
+    cout << "\"!@#$%^&*()\""; 
+
     return 0;
 }
