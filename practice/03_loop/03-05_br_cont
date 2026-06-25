@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    for (int i = 1; i<=10; i++){
+        if (i==5){ // 5만 건너뜀
+            continue;
+        }
+        if (i==8){ // 딱 8에서 멈추는거임 
+            break;
+        }
+        cout << i << endl;
+    }
+}
