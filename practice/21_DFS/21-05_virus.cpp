@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int count = -1;
+vector <int> graph[101];
+bool visited[101];
+
+void dfs(int node){
+    visited[node] = true;
+    count ++;
+    for(int i = 0; i<graph[node].size();i++){
+        int next = graph[node][i];
+        if(!visited[next]){
+            dfs(next);
+        }
+    }
+}
+
+int main(){
+    int n , m;
+    cin >> n >> m ;
+
+    for(int i = 0; i<m ; i++){
+        int a , b;
+        cin >> a >> b;
+
+        graph[a].push_back(b);
+        graph[b].push_back(a);
+
+    }
+
+    dfs(1);
+
+    cout << count;
+}
